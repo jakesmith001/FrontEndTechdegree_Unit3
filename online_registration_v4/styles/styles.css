@@ -1,8 +1,9 @@
+/* Global Styles */
+
 .wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
-    
 }
 
 #top{
@@ -10,8 +11,27 @@
     flex-direction: column;
     align-items: center;
     width: 90%;
-    margin: 0 auto;
+    margin: .5rem auto 0 auto;
+    border-bottom: 5px solid rgb(44, 43, 59);
+    padding-bottom: 1rem;
 }
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: .1rem auto 0 auto;
+    border-top: 2px solid rgb(44, 43, 59);
+    padding-top: 1rem;
+}
+
+footer {
+    width: 90%;
+    margin: .1rem auto 0 auto;
+}
+
+/* Form Sections */
 
 form {
     display: flex;
@@ -21,20 +41,44 @@ form {
     margin: 0 auto;
 }
 
+fieldset:first-child {
+    border-bottom: 2px solid rgb(44, 43, 59);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+legend,
+div input:not(:last-child),
+fieldset div,
+fieldset select {
+    margin-bottom: 1rem;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    padding-left: 1rem;
+}
+
+textarea {
+    margin-bottom: 1rem;
+}
+
 input[type="submit"] {
-    padding: .5em;
+    padding: .5rem;
     background: teal;
     color: white;
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
 
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1em;
-    padding: 1em 0;
+    height: 1rem;
+    padding: 1rem 0;
     background: rgb(44, 43, 59);
     color: white;
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
+
+/* Breakpoints */
