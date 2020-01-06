@@ -27,8 +27,47 @@
 }
 
 footer {
+    text-align: center;
     width: 90%;
     margin: .1rem auto 0 auto;
+}
+
+h1, 
+h2, 
+p,
+li,
+legend,
+label,
+input,
+footer {
+    font-family: 'Roboto', 'Carrois Gothic SC', 'Segoe UI', sans-serif;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1rem;
+    padding: 1rem 0;
+    background: rgb(44, 43, 59);
+    color: white;
+    font-size: 1.3rem;
+}
+
+/* Top section */
+
+#top h1 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+#top p {
+    text-align: center;
+    color: rgba(44, 43, 59, .5);
+    margin-bottom: 1rem;
 }
 
 /* Form Sections */
@@ -37,14 +76,40 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+}
+
+label {
+    color: rgba(44, 43, 59, .7);
+    margin-bottom: .5rem;
+}
+
+fieldset:first-child input,
+select {
+    height: 2rem;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    font-size: .8rem;
+    border: none;
 }
 
 fieldset:first-child {
     border-bottom: 2px solid rgb(44, 43, 59);
     padding-bottom: 1rem;
     margin-bottom: 1rem;
+}
+
+::placeholder {
+    color: rgba(44, 43, 59, .4);
+    text-align: right;
+    padding-right: 1rem;
 }
 
 legend,
@@ -70,15 +135,12 @@ input[type="submit"] {
     font-size: 1.3rem;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 1rem;
-    padding: 1rem 0;
-    background: rgb(44, 43, 59);
-    color: white;
-    font-size: 1.3rem;
-}
-
 /* Breakpoints */
+
+@media (min-width: 768px) {
+    #top,
+    #contact-form,
+    footer {
+        width: 60%;
+    }
+}

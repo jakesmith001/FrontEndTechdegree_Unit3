@@ -4,7 +4,7 @@
         <title>Code Review Newsletter Signup</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <!--Remember to add google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/reset.css">
         <link rel="stylesheet" href="styles/styles.css">
     </head>
@@ -16,7 +16,7 @@
             <h1>Signup for our newsletter</h1>
             <p>Get the latest news on how your code is doing right in your inbox</p>
         </div>
-        <div id="contact-form"></div>
+        <div id="contact-form">
             <form action="">
 
                 <fieldset>
@@ -24,12 +24,12 @@
 
                     <div class="wrapper">
                         <label for="name">Full Name</label>
-                        <input type="text" name="name">
+                        <input type="text" name="name" placeholder="Required">
                     </div>
 
                     <div class="wrapper">
                         <label for="email">Email Address</label>
-                        <input type="email" name="email">
+                        <input type="email" name="email" placeholder="Required">
                     </div>
 
                     <div class="wrapper">
@@ -45,6 +45,7 @@
                     <div class="wrapper">
                         <label for="city">City</label>
                         <select>
+                            <option value="" disabled selected hidden>Choose State</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
                             <option value="AZ">Arizona</option>
