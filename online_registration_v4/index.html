@@ -17,34 +17,34 @@
             <p>Get the latest news on how your code is doing right in your inbox</p>
         </div>
         <div id="contact-form">
-            <form action="">
+            <form action="#">
 
                 <fieldset>
                     <legend>Contact Information</legend>
 
-                    <div class="wrapper">
+                    <div class="div-wrapper">
                         <label for="name">Full Name</label>
-                        <input type="text" name="name" placeholder="Required">
+                        <input required type="text" name="name" placeholder="Required" id="name">
                     </div>
 
-                    <div class="wrapper">
+                    <div class="div-wrapper">
                         <label for="email">Email Address</label>
-                        <input type="email" name="email" placeholder="Required">
+                        <input required type="email" name="email" placeholder="Required" id="email">
                     </div>
 
-                    <div class="wrapper">
+                    <div class="div-wrapper">
                         <label for="phone-num">Phone Number</label>
-                        <input type="tel" name="phone-num">
+                        <input required type="tel" name="phone-num" placeholder="(123)456-7890" id="phone-num">
                     </div>
 
-                    <div class="wrapper">
+                    <div class="div-wrapper">
                         <label for="address">Street Address</label>
-                        <input type="text" name="address">
+                        <input required type="text" name="address" id="address">
                     </div>
 
-                    <div class="wrapper">
+                    <div class="div-wrapper">
                         <label for="city">City</label>
-                        <select>
+                        <select required name="city" id="city">
                             <option value="" disabled selected hidden>Choose State</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
@@ -99,33 +99,35 @@
                             <option value="WY">Wyoming</option>
                         </select>
                     </div>
-                    <div class="wrapper">
+                    <div class="div-wrapper small">
                         <label for="zip">Zip Code</label>
-                        <input type="text" name="zip">
+                        <input required type="text" name="zip" placeholder="12345" id="zip">
                     </div>
                 </fieldset>
                 <fieldset>
                     <legend>Newsletter</legend>
                     <div class="newsletters">
                         <p>Select the newsletters you would like to receive</p>
-                        <input type="checkbox" name="html-news" value="html"><label for="html-news">HTML News</label><br>
-                        <input type="checkbox" name="css-news" value="css"><label for="css-news">CSS News</label><br>
-                        <input type="checkbox" name="js-news" value="javascript"><label for="js-news">JavaScript News</label>
+                        <input required type="checkbox" name="html-news" value="html" id="html-news"><label for="html-news">HTML News</label><br>
+                        <input required type="checkbox" name="css-news" value="css" id="css-news"><label for="css-news">CSS News</label><br>
+                        <input required type="checkbox" name="js-news" value="javascript" id="js-news"><label for="js-news">JavaScript News</label>
                     </div>
                     <div class="news-format">
                         <p>Newsletter format</p>
-                        <input type="radio" name="format" value="html"><label for="html-form">HTML</label><br>
-                        <input type="radio" name="format" value="css"><label for="pt-form">Plain text</label><br>
+                        <input required type="radio" name="format" value="html" id="html-radio"><label for="html-radio">HTML</label><br>
+                        <input required type="radio" name="format" value="plain text" id="plain-radio"><label for="plain-radio">Plain text</label><br>
                     </div>
                 </fieldset>
 
                 <div class="textbox">
-                    <p>Other topics you'd like to hear about</p>
-                    <textarea></textarea>
+                    <label for="textarea">Other topics you'd like to hear about</label>
+                    <textarea id="textarea" name="textarea"></textarea>
                 </div>
-                <input type="submit" value="Sign Up">
+                <input type="submit" value="Sign Up" name="submit" id="submit-btn">
             </form>
         </div>
     </body>
-    <footer>&copy The Code Review</footer>
+    <footer>
+        &copy; The Code Review
+    </footer>
 </html>

@@ -1,6 +1,7 @@
 /* Global Styles */
 
-.wrapper {
+.wrapper,
+.div-wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -78,6 +79,7 @@ form {
     justify-content: center;
     width: 100%;
     margin: 0 auto;
+    background: rgb(238, 238, 238);
 }
 
 legend {
@@ -86,7 +88,7 @@ legend {
     padding-bottom: 1rem;
 }
 
-label {
+.div-wrapper label {
     color: rgba(44, 43, 59, .7);
     margin-bottom: .5rem;
 }
@@ -99,6 +101,13 @@ select {
     font-size: .8rem;
     border: none;
     padding-left: .5rem;
+    transition-duration: 1s;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    background-color: white;
 }
 
 fieldset:first-child {
@@ -129,6 +138,10 @@ input[name="zip"] {
     width: 25%;
 }
 
+select[name="city"] {
+    margin-bottom: 0;
+}
+
 input[type="checkbox"] + label,
 input[type="radio"] + label {
     padding-left: 1rem;
@@ -140,6 +153,11 @@ textarea {
     width: 100%;
     resize: none;
     background-color: whitesmoke;
+    border: none;
+}
+
+.textbox label {
+    margin-bottom: .5rem;
 }
 
 input[type="submit"] {
@@ -160,4 +178,31 @@ input[type="submit"] {
     footer {
         width: 60%;
     }
+    
+    .div-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .div-wrapper label {
+        margin-bottom: 0;
+    }
+
+    fieldset:first-child input:not([name="zip"]),
+    fieldset:first-child select {
+        width: 70%;
+    }
+
+    .small {
+        justify-content: flex-start;
+    }
+
+    .small label {
+        width: 30%;
+    }
+
+    /* fieldset[name='city'],
+    fieldset[name='zip'] {
+        justify-content: flex-start;
+    } */
 }
